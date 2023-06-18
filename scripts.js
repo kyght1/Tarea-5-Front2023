@@ -13,22 +13,21 @@ function suma(notas) {
   for (i = 0; i < notas.length; i++) {
     suma += notas[i];
   }
-  
+  console.log("Suma de notas: ",suma);
   return suma;
 }
-/*prueba de suma notas*/
-let S =suma(notas);
-console.log("Suma de notas: ",S);
 
-/*la dunción promedio dividirá la suma total del array entre el largo de este, es decir, la cantidad de notas */
-/*DOM---> suma (numero), cElementos (numero)
+/*la función promedio dividirá la suma total del array entre el largo de este, es decir, la cantidad de notas */
+/*DOM---> array notas
   REC---> el promedio de notas (numero)*/
-function promedio(suma,cElementos) {
-    return suma/cElementos;
+function promedio(notas) {
+    let S=suma(notas);
+    let p= S/notas.length;
+    return p;
 }
 
 
 /*calculo el promedio de notas*/
-let p= (promedio(S,notas.length)).toFixed(1);
+let prom= (promedio(notas)).toFixed(1);
 /*Muestro el resultado por consola*/
-console.log("Promedio de notas, (redondeado): ",p);
+console.log("Promedio de notas, (redondeado): ",prom);
